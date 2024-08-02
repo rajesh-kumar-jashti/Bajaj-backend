@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 4000;
 
 app.use(express.json());
 
@@ -35,6 +35,10 @@ app.post('/bfhl', (req, res) => {
 
 app.get('/bfhl', (req, res) => {
     res.json({ operation_code: 1 });
+});
+
+app.get('/', (req, res) => {
+    res.json({ "Hello world": "gerre" });
 });
 
 app.listen(PORT, () => {
